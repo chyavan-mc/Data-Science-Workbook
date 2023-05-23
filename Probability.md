@@ -15,11 +15,13 @@ both the sample space $\Omega$ and the event $E$ are uncountably infinite
 
 ### Boole's Inequality
 $$ P(\bigcup_{i} A_i) \leq \sum_i P(A_i)$$
+
 This is derived from the equation $P(A \cup B) = P(A) + P(B) - \boxed{P(A \cap B)}$
 
 ## Conditional Probability
 
 If A & B are two events and $P(B) > 0$,
+
 $$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
 
 * If $A \subset B$, $P(A|B) = \frac{P(A)}{P(B)}$
@@ -85,6 +87,7 @@ Given a discrete RV $X$, we define the associated probability mass function (pmf
 
 > **Example:**
 > In the coin toss example
+> 
 > $$\begin{align*}
 p_X(x)=P(X=x)=\begin{cases} 1/8 & x=0 \\ 3/8 & x=1 \\ 3/8 & x=2\\
 1/8 & x=3 \\ 0 & \text{else}
@@ -102,6 +105,7 @@ For the PMF
 Given a continuous RV $X$, we define the associated probability density function (pdf) $f_X: \mathbb{R} \to \mathbb{R}$ as the derivative of the cdf $f_X=F'_X$ where it exists, and 0 elsewhere.
 
 > **Example:**
+> 
 > $$\begin{align*}
 F_R(r)&=P(R\leq r)=\begin{cases} 0 & r < 0 \\
 \pi r^2 / (\pi 1^2)=r^2 & 0\leq r < 1\\
