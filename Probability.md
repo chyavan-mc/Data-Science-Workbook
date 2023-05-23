@@ -116,4 +116,4 @@ f_R(r)&=\frac{dF_R(r)}{dr}=\begin{cases} 0 &  r<0 \\
 
 For the PDF
 * $f_X$ is a non-negative function
-* $\int_{\R} f_X(x)dx=1$
+* $\int_{\mathbb{R}} f_X(x)dx=1$
