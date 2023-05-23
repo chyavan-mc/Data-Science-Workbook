@@ -58,7 +58,7 @@ $$ (x+y)^n = \sum_{i=0}^{n} {n \choose i} x^i y^{n-i} $$
 
 ## Random Variables
 
-A random variable (RV) $X$ is a function from the sample space $\Omega$ to the real numbers $X:\Omega \to \mathbb{R}$. Assuming $E \subset R$ we denote the event $\{ \omega \in \Omega : X(\omega) \in E \} \subset \Omega $ by $X \in E$
+A random variable (RV) $X$ is a function from the sample space $\Omega$ to the real numbers $X:\Omega \to \mathbb{R}$. Assuming $E \subset R$ we denote the event $ \{ \omega \in \Omega : X(\omega) \in E \} \subset \Omega $ by $X \in E$
 
 > **Example:**
 > Throwing two fair dice, $\Omega=\{ \omega = (a,b): a \in \{1,…,6\},b \in \{1,…,6\}\}$, the RV $X(a,b)=a+b$
@@ -103,7 +103,7 @@ Given a continuous RV $X$, we define the associated probability density function
 
 > **Example:**
 > $$\begin{align*}
-F_R(r)&=\P(R\leq r)=\begin{cases} 0 & r < 0 \\
+F_R(r)&=P(R\leq r)=\begin{cases} 0 & r < 0 \\
 \pi r^2 / (\pi 1^2)=r^2 & 0\leq r < 1\\
 1 & 1\leq r
 \end{cases}, \\
