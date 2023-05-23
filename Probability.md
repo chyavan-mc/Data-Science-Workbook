@@ -7,9 +7,9 @@
 2. **Event** - An event $E$ is a subset of the sample space $\Omega$, or in other words a set of possible outcomes.
 
 Both Sample Space and Event can be finite, countably infinite, or uncountably infinite. For example, consider a random experiment of throwing a dart at a round board without missing the board. Assuming the radius of the board is 1, the sample space is the set of all two dimensional vectors inside the unit circle - 
-$$\Omega=\left\{(x,y)\,:\, x,y\in\mathbb{R}, \,\sqrt{x^2+y^2} < 1\right\}$$
+$$\Omega=\{(x,y)\,:\, x,y\in\mathbb{R}, \,\sqrt{x^2+y^2} < 1\}$$
 An event describing a bullseye hit is - 
-$$E=\left\{(x,y)\, : \,x,y\in\mathbb{R}, \,\sqrt{x^2+y^2} < 0.1\right\}\subset\Omega.$$
+$$E=\{(x,y)\, : \,x,y\in\mathbb{R}, \,\sqrt{x^2+y^2} < 0.1\}\subset\Omega.$$
 
 both the sample space $\Omega$ and the event $E$ are uncountably infinite
 
