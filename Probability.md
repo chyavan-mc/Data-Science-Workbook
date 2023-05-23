@@ -36,6 +36,7 @@ $$P(A_1 \cap A_2 \cap ... A_n) = P(A_1).P(A_2)...P(A_n)$$
 
 ### Conditional Independence
 A and B are conditionally independent if
+
 $$ P(A \cap B | C) = P(A|C).P(B|C) $$
 
 ### General Multiplication rule
@@ -60,7 +61,7 @@ $$ (x+y)^n = \sum_{i=0}^{n} {n \choose i} x^i y^{n-i} $$
 
 ## Random Variables
 
-A random variable (RV) $X$ is a function from the sample space $\Omega$ to the real numbers $X:\Omega \to \mathbb{R}$. Assuming $E \subset R$ we denote the event $ \{ \omega \in \Omega : X(\omega) \in E \} \subset \Omega $ by $X \in E$
+A random variable (RV) $X$ is a function from the sample space $\Omega$ to the real numbers $X:\Omega \to \mathbb{R}$. Assuming $E \subset R$ we denote the event $\{ \omega \in \Omega : X(\omega) \in E \} \subset \Omega$ by $X \in E$
 
 > **Example:**
 > Throwing two fair dice, $\Omega=\{ \omega = (a,b): a \in \{1,…,6\},b \in \{1,…,6\}\}$, the RV $X(a,b)=a+b$
@@ -116,6 +117,7 @@ f_R(r)&=\frac{dF_R(r)}{dr}=\begin{cases} 0 &  r<0 \\
 0 & 1\leq r
 \end{cases}.
 \end{align*}$$
+> 
 > **NOTE:** The PDF can have a value greater than 1
 
 For the PDF
