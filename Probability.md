@@ -2,6 +2,24 @@
 
 ## Basic Definitions
 
+### What is Probability?
+
+#### Frequentist Interpretation
+This approach defines an event's probability (Also known as *physical probability*) as the limit of its relative frequency in many trials (the long-run probability)
+
+> **Example:**
+> If you toss a coin a large (ideally, *infinite*) number of times, the probability of heads can be determined as the frequency the coin flip resulting in heads
+
+#### Bayesian Interpretation
+This approach defines an event's probability (Also known as *Evidential probability*) as reasonable expectation representing a state of knowledge or as quantification of a personal belief.. This means, if we have a different level of knowledge about the same event, the estimate of the probability will be different.
+
+> **Example:**
+> If you hold an election, the probability of a particular candidate winning can be defined as the expectation of the candidate winning with the consideration of all the knowledge (and uncertainties) about the event
+
+A more detailed explaination can be found in this [Youtube Video](https://youtu.be/pJyKM-7IgAU?t=85) and this [Wikipedia Article](https://en.wikipedia.org/wiki/Probability_interpretations)
+
+#### 
+
 1. **Sample Space** - A sample space $\Omega$ associated with a random experiment is the set of all possible outcomes of the experiment
 
 2. **Event** - An event $E$ is a subset of the sample space $\Omega$, or in other words a set of possible outcomes.
@@ -64,7 +82,7 @@ $$ (x+y)^n = \sum_{i=0}^{n} {n \choose i} x^i y^{n-i} $$
 A random variable (RV) $X$ is a function from the sample space $\Omega$ to the real numbers $X:\Omega \to \mathbb{R}$. Assuming $E \subset R$ we denote the event $\{ \omega \in \Omega : X(\omega) \in E \} \subset \Omega$ by $X \in E$
 
 > **Example:**
-> Throwing two fair dice, $\Omega=\{ \omega = (a,b): a \in \{1,…,6\},b \in \{1,…,6\}\}$, the RV $X(a,b)=a+b$
+> Tossing three fair coins, the RV $X$ can be defined as the count of the number of heads
 
 * A random variable $X$ is discrete if $P(X \in K) = 1$ for some finite or countably infinite set $K \subset \mathbb{R}$.
 * A random variable $X$ is continuous if $P(X=x)=0$ for all $x \in \mathbb{R}$
@@ -123,3 +141,34 @@ f_R(r)&=\frac{dF_R(r)}{dr}=\begin{cases} 0 &  r<0 \\
 For the PDF
 * $f_X$ is a non-negative function
 * $\int_{\mathbb{R}} f_X(x)dx=1$
+
+## Expectation
+If $X$ is a discrete RV
+$$ E(X) = \sum_{x} x, p_X(x)$$
+
+If $X$ is a continuous RV
+$$ E(X) = \int_{-\infty}^{\infty} x \, f_X(x)$$
+
+### Expectations for functions of random variables
+
+If $X$ is a discrete RV
+$$ E(g(X)) = \sum_y y p_{g(X)}(y) $$
+which can be simplified to
+$$ E(g(X)) = \sum_{x} g(x) p_X(x) $$
+
+If $X$ is a continuous RV
+$$ E(g(X)) = \int y f_{g(X)}(y)dy $$
+which can be simplified to
+$$ E(g(X)) = \int_{-\infty}^{\infty} g(x) f_X(x)dx $$
+
+A major property of expectations is - $ E(aX+b)=a E(X) + b $
+
+## Variance
+The variance of an RV $X$ is the expectation of the RV $Y=(X−E(X))^2$
+$$
+\begin{align*}
+Var(X)  &= E\left((X-E(X))^2\right) \\
+        &=E(X^2)-(E(X))^2
+\end{align*}$$
+
+A major property of expectations is - $Var(aX+b)=a^2Var(X)$
