@@ -144,32 +144,41 @@ For the PDF
 
 ## Expectation
 If $X$ is a discrete RV
+
 $$ E(X) = \sum_{x} x, p_X(x)$$
 
 If $X$ is a continuous RV
+
 $$ E(X) = \int_{-\infty}^{\infty} x \, f_X(x)$$
 
 ### Expectations for functions of random variables
 
 If $X$ is a discrete RV
+
 $$ E(g(X)) = \sum_y y p_{g(X)}(y) $$
+
 which can be simplified to
+
 $$ E(g(X)) = \sum_{x} g(x) p_X(x) $$
 
+
 If $X$ is a continuous RV
+
 $$ E(g(X)) = \int y f_{g(X)}(y)dy $$
+
 which can be simplified to
+
 $$ E(g(X)) = \int_{-\infty}^{\infty} g(x) f_X(x)dx $$
 
 A major property of expectations is - $ E(aX+b)=a E(X) + b $
 
 ## Variance
 The variance of an RV $X$ is the expectation of the RV $Y=(X−E(X))^2$
-$$
-\begin{align*}
+
+$$ \begin{align*}
 Var(X)  &= E\left((X-E(X))^2\right) \\
         &=E(X^2)-(E(X))^2
-\end{align*}$$
+\end{align*} $$
 
 A major property of expectations is - $Var(aX+b)=a^2Var(X)$
 
@@ -185,6 +194,7 @@ $$ p_X(x) = \left\{ \begin{array}{ll}
 \end{array} \right. $$
 
 #### Expectation & Variance
+
 $$ E(X) = \theta \hspace{1 cm} Var(X) = \theta(1-\theta) $$
 
 ![Bernoulli](./assets/bern_dist.png)
@@ -198,6 +208,7 @@ $$ p_X(x) = \left\{ \begin{array}{ll}
 \end{array} \right. $$
 
 #### Expectation & Variance
+
 $$ E(X) = n\theta \hspace{1 cm} Var(X) = n\theta(1-\theta) $$
 
 ![Binomial](./assets/binom_dist.png)
@@ -213,6 +224,7 @@ $$ p_X(x) = \left\{ \begin{array}{ll}
 \end{array} \right. $$
 
 #### Expectation & Variance
+
 $$ E(X) = \frac{1 - \theta}{\theta} \hspace{1 cm} Var(X) = \frac{1-\theta}{\theta^2} $$
 
 ![Geometric](./assets/geom_dist.png)
@@ -228,6 +240,7 @@ $$ p_X(x) = \left\{ \begin{array}{ll}
 We observe that the PMF of Poisson approximates the PMF of binomial distribution when $n \to \infty$, $\theta \to 0 $, and $nθ = \lambda \in (0,\infty)$
 
 #### Expectation & Variance
+
 $$ E(X) = \lambda \hspace{1 cm} Var(X) = \lambda $$
 
 ![Poisson](./assets/poisson_dist.png)
