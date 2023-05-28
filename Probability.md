@@ -172,3 +172,62 @@ Var(X)  &= E\left((X-E(X))^2\right) \\
 \end{align*}$$
 
 A major property of expectations is - $Var(aX+b)=a^2Var(X)$
+
+## Discrete RV Distributions
+
+### Bernoulli Trials
+The Bernoulli trial RV may be used to characterize the probability that an experiment (or trial) that may either succeed, $X=1$, or fail, $X=0$, with probabilities $\theta$, $1−\theta$ respectively. The PMF is given by -
+
+$$ p_X(x) = \left\{ \begin{array}{ll}
+        \theta & x=1 \\
+        1-\theta & x=0 \\
+        0 &\text{otherwise}
+\end{array} \right. $$
+
+#### Expectation & Variance
+$$ E(X) = \theta \hspace{1 cm} Var(X) = \theta(1-\theta) $$
+
+![Bernoulli](./assets/bern_dist.png)
+
+### Binomial Distribution
+The Binomial RV counts the number of successes in $n$ independent Bernoulli experiments with parameter $\theta$, regardless of the ordering of the results of the experiments. The PMF is given by -
+
+$$ p_X(x) = \left\{ \begin{array}{ll}
+        nC_x \theta^x (1-\theta)^{n-x} &  x=0,1,\ldots,n \\
+        0 &\text{otherwise}
+\end{array} \right. $$
+
+#### Expectation & Variance
+$$ E(X) = n\theta \hspace{1 cm} Var(X) = n\theta(1-\theta) $$
+
+![Binomial](./assets/binom_dist.png)
+
+When the parameter $n$ in the binomial distribution is set to 1, the binomial distribution simplifies to a bernoulli trial.
+
+### Geometric Distribution
+The geometric RV is the number of failures we encounter in a sequence of independent Bernoulli experiments with parameter $\theta$ before encountering success. The PMF is given by -
+
+$$ p_X(x) = \left\{ \begin{array}{ll}
+        \theta (1-\theta)^{x} &  x \in \mathbb{N}\cup\{0\} \\
+        0 &\text{otherwise}
+\end{array} \right. $$
+
+#### Expectation & Variance
+$$ E(X) = \frac{1 - \theta}{\theta} \hspace{1 cm} Var(X) = \frac{1-\theta}{\theta^2} $$
+
+![Geometric](./assets/geom_dist.png)
+
+### Poisson Distribution
+The Poisson RV has the following PMF - 
+
+$$ p_X(x) = \left\{ \begin{array}{ll}
+        \frac{\lambda^x e^{-\lambda}}{x!} &  x \in \mathbb{N}\cup\{0\} \\
+        0 &\text{otherwise}
+\end{array} \right. $$
+
+We observe that the PMF of Poisson approximates the PMF of binomial distribution when $n \to \infty$, $\theta \to 0 $, and $nθ = \lambda \in (0,\infty)$
+
+#### Expectation & Variance
+$$ E(X) = \lambda \hspace{1 cm} Var(X) = \lambda $$
+
+![Poisson](./assets/poisson_dist.png)
