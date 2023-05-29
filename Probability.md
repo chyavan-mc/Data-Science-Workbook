@@ -182,65 +182,95 @@ Var(X)  &= E\left((X-E(X))^2\right) \\
 
 A major property of expectations is - $Var(aX+b)=a^2Var(X)$
 
+
 ## Discrete RV Distributions
 
 ### Bernoulli Trials
-The Bernoulli trial RV may be used to characterize the probability that an experiment (or trial) that may either succeed, $X=1$, or fail, $X=0$, with probabilities $\theta$, $1−\theta$ respectively. The PMF is given by -
+The Bernoulli trial RV may be used to characterize the probability that an experiment (or trial) that may either succeed, $X=1$, or fail, $X=0$, with probabilities $\theta$, $1−\theta$ respectively. The Bernoulli trial RV, $X\sim\text{Ber}(\theta)$ where $\theta\in[0,1]$ has the PMF given by -
 
-$$ p_X(x) = \left\{ \begin{array}{ll}
-        \theta & x=1 \\
-        1-\theta & x=0 \\
-        0 &\text{otherwise}
-\end{array} \right. $$
+$$p_X(x)=\begin{cases} \theta & x=1\\ 1-\theta & x=0\\0&\text{otherwise}\end{cases}$$
 
 #### Expectation & Variance
 
-$$ E(X) = \theta \hspace{1 cm} Var(X) = \theta(1-\theta) $$
+$$ E(X) = \theta \qquad Var(X) = \theta(1-\theta) $$
 
 ![Bernoulli](./assets/bern_dist.png)
 
 ### Binomial Distribution
-The Binomial RV counts the number of successes in $n$ independent Bernoulli experiments with parameter $\theta$, regardless of the ordering of the results of the experiments. The PMF is given by -
+The Binomial RV counts the number of successes in $n$ independent Bernoulli experiments with parameter $\theta$, regardless of the ordering of the results of the experiments. The Binomial RV, $X\sim\text{Bin}(n,\theta)$ where $\theta\in[0,1], n\in\mathbb{N}^0$ has the PMF given by -
 
-$$ p_X(x) = \left\{ \begin{array}{ll}
-        nC_x \theta^x (1-\theta)^{n-x} &  x=0,1,\ldots,n \\
-        0 &\text{otherwise}
-\end{array} \right. $$
+$$p_X(x)=\begin{cases}
+nC_x \theta^x (1-\theta)^{n-x} &  x=0,1,\ldots,n\\
+0 & \text{otherwise}
+\end{cases}$$
 
 #### Expectation & Variance
 
-$$ E(X) = n\theta \hspace{1 cm} Var(X) = n\theta(1-\theta) $$
+$$ E(X) = n\theta \qquad Var(X) = n\theta(1-\theta) $$
 
 ![Binomial](./assets/binom_dist.png)
 
 When the parameter $n$ in the binomial distribution is set to 1, the binomial distribution simplifies to a bernoulli trial.
 
 ### Geometric Distribution
-The geometric RV is the number of failures we encounter in a sequence of independent Bernoulli experiments with parameter $\theta$ before encountering success. The PMF is given by -
+The geometric RV is the number of failures we encounter in a sequence of independent Bernoulli experiments with parameter $\theta$ before encountering success. The Geometric RV, $X\sim\text{Geom}(\theta)$ where $\theta\in[0,1]$ has the PMF given by -
 
-$$ p_X(x) = \left\{ \begin{array}{ll}
-        \theta (1-\theta)^{x} &  x \in \mathbb{N}\cup\{0\} \\
-        0 &\text{otherwise}
-\end{array} \right. $$
+$$p_X(x)=\begin{cases}\theta(1-\theta)^x & x\in\mathbb{N}\cup\{0\}\\ 0 &\text{otherwise}\end{cases}$$
 
 #### Expectation & Variance
 
-$$ E(X) = \frac{1 - \theta}{\theta} \hspace{1 cm} Var(X) = \frac{1-\theta}{\theta^2} $$
+$$ E(X) = \frac{1 - \theta}{\theta} \qquad Var(X) = \frac{1-\theta}{\theta^2} $$
 
 ![Geometric](./assets/geom_dist.png)
 
 ### Poisson Distribution
-The Poisson RV has the following PMF - 
+The Poisson RV, $X\sim \text{Pois}(\lambda)$ where $\lambda>0$ has the PMF given by -
 
-$$ p_X(x) = \left\{ \begin{array}{ll}
-        \frac{\lambda^x e^{-\lambda}}{x!} &  x \in \mathbb{N}\cup\{0\} \\
-        0 &\text{otherwise}
-\end{array} \right. $$
+$$\begin{align*}
+p_X(x)=\begin{cases}\frac{\lambda^x e^{-\lambda}}{x!}
+& x\in\mathbb{N}\cup\{0\}\\ 0 & \text{otherwise} \end{cases} 
+\end{align*}$$
 
 We observe that the PMF of Poisson approximates the PMF of binomial distribution when $n \to \infty$, $\theta \to 0 $, and $nθ = \lambda \in (0,\infty)$
 
 #### Expectation & Variance
 
-$$ E(X) = \lambda \hspace{1 cm} Var(X) = \lambda $$
+$$ E(X) = \lambda \qquad Var(X) = \lambda $$
 
 ![Poisson](./assets/poisson_dist.png)
+
+
+## Continuous RV Distributions
+
+### Uniform Distribution
+The Uniform RV, $X\sim U(a,b)$ where $a < b$ has the PMF given by -
+
+$$ f_X(x)=\begin{cases}1/(b-a) & x\in[a,b]\\ 0 & \text{otherwise}\end{cases} $$
+
+#### Expectation & Variance
+
+$$ E(X) = \frac{a+b}{2} \qquad Var(X) = \frac{(b-a)^2}{12} $$
+
+![Uniform](./assets/uniform_dist.png)
+
+### Exponential Distribution
+The Exponential RV, $X\sim \text{Exp}(\lambda)$ where $\lambda > 0$ has the PMF given by -
+
+$$f_X(x)=\begin{cases}\lambda e^{-\lambda x} & x > 0\\ 0 &\text{otherwise}\end{cases}$$
+
+#### Expectation & Variance
+
+$$ E(X) = \frac{1}{\lambda} \qquad Var(X) = \frac{1}{\lambda^2} $$
+
+![Exponential](./assets/exponential_dist.png)
+
+### Gaussian Distribution
+The Gaussian RV, $X\sim N(\mu,\sigma^2)$ where $\mu\in\mathbb{R}, \sigma^2 > 0$ has the PMF given by -
+
+$$f_X(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$
+
+#### Expectation & Variance
+
+$$ E(X) = \mu \qquad Var(X) = \sigma^2 $$
+
+![Gaussian](./assets/gaussian_dist.png)
