@@ -108,11 +108,17 @@ Given a discrete RV $X$, we define the associated probability mass function (pmf
 > In the coin toss example
 > 
 > $$\begin{align*}
-p_X(x)=P(X=x)=\begin{cases} 1/8 & x=0 \\ 3/8 & x=1 \\ 3/8 & x=2\\
-1/8 & x=3 \\ 0 & \text{else}
+p_X(x)=P(X=x)=\begin{cases} 1/8 & x=0 \\
+3/8 & x=1 \\
+3/8 & x=2\\
+1/8 & x=3 \\
+0 & \text{else}
 \end{cases} \qquad
-F_X(x)=P(X\leq x)=\begin{cases} 0 & x < 0 \\ 1/8 & 0\leq x < 1 \\ 1/2 & 1\leq x <  2\\
-7/8 & 2\leq x < 3 \\ 1 & 3 \leq x
+F_X(x)=P(X\leq x)=\begin{cases} 0 & x < 0 \\
+1/8 & 0\leq x < 1 \\
+1/2 & 1\leq x <  2\\
+7/8 & 2\leq x < 3 \\
+1 & 3 \leq x
 \end{cases}.
 \end{align*}$$
 
@@ -170,7 +176,7 @@ which can be simplified to
 
 $$ E(g(X)) = \int_{-\infty}^{\infty} g(x) f_X(x)dx $$
 
-A major property of expectations is - $ E(aX+b)=a E(X) + b $
+A major property of expectations is $E(aX+b)=a E(X) + b$
 
 ## Variance
 The variance of an RV $X$ is the expectation of the RV $Y=(X−E(X))^2$
@@ -188,7 +194,9 @@ A major property of expectations is - $Var(aX+b)=a^2Var(X)$
 ### Bernoulli Trials
 The Bernoulli trial RV may be used to characterize the probability that an experiment (or trial) that may either succeed, $X=1$, or fail, $X=0$, with probabilities $\theta$, $1−\theta$ respectively. The Bernoulli trial RV, $X\sim\text{Ber}(\theta)$ where $\theta\in[0,1]$ has the PMF given by -
 
-$$p_X(x)=\begin{cases} \theta & x=1\\ 1-\theta & x=0\\0&\text{otherwise}\end{cases}$$
+$$p_X(x)=\begin{cases} \theta & x=1\\
+1-\theta & x=0\\
+0&\text{otherwise}\end{cases}$$
 
 #### Expectation & Variance
 
@@ -215,7 +223,8 @@ When the parameter $n$ in the binomial distribution is set to 1, the binomial di
 ### Geometric Distribution
 The geometric RV is the number of failures we encounter in a sequence of independent Bernoulli experiments with parameter $\theta$ before encountering success. The Geometric RV, $X\sim\text{Geom}(\theta)$ where $\theta\in[0,1]$ has the PMF given by -
 
-$$p_X(x)=\begin{cases}\theta(1-\theta)^x & x\in\mathbb{N}\cup\{0\}\\ 0 &\text{otherwise}\end{cases}$$
+$$p_X(x)=\begin{cases}\theta(1-\theta)^x & x\in\mathbb{N}\cup\{0\}\\
+0 &\text{otherwise}\end{cases}$$
 
 #### Expectation & Variance
 
@@ -228,7 +237,8 @@ The Poisson RV, $X\sim \text{Pois}(\lambda)$ where $\lambda>0$ has the PMF given
 
 $$\begin{align*}
 p_X(x)=\begin{cases}\frac{\lambda^x e^{-\lambda}}{x!}
-& x\in\mathbb{N}\cup\{0\}\\ 0 & \text{otherwise} \end{cases} 
+& x\in\mathbb{N}\cup\{0\}\\
+0 & \text{otherwise} \end{cases} 
 \end{align*}$$
 
 We observe that the PMF of Poisson approximates the PMF of binomial distribution when $n \to \infty$, $\theta \to 0 $, and $nθ = \lambda \in (0,\infty)$
@@ -245,7 +255,8 @@ $$ E(X) = \lambda \qquad Var(X) = \lambda $$
 ### Uniform Distribution
 The Uniform RV, $X\sim U(a,b)$ where $a < b$ has the PMF given by -
 
-$$ f_X(x)=\begin{cases}1/(b-a) & x\in[a,b]\\ 0 & \text{otherwise}\end{cases} $$
+$$ f_X(x)=\begin{cases}1/(b-a) & x\in[a,b]\\
+0 & \text{otherwise}\end{cases} $$
 
 #### Expectation & Variance
 
@@ -256,7 +267,8 @@ $$ E(X) = \frac{a+b}{2} \qquad Var(X) = \frac{(b-a)^2}{12} $$
 ### Exponential Distribution
 The Exponential RV, $X\sim \text{Exp}(\lambda)$ where $\lambda > 0$ has the PMF given by -
 
-$$f_X(x)=\begin{cases}\lambda e^{-\lambda x} & x > 0\\ 0 &\text{otherwise}\end{cases}$$
+$$f_X(x)=\begin{cases}\lambda e^{-\lambda x} & x > 0\\
+0 &\text{otherwise}\end{cases}$$
 
 #### Expectation & Variance
 
