@@ -1,6 +1,6 @@
-# Probability Basics
+# Probability and Statistics
 
-## Basic Definitions
+## Basics
 
 ### What is Probability?
 
@@ -18,7 +18,7 @@ This approach defines an event's probability (Also known as *Evidential probabil
 
 A more detailed explaination can be found in this [Youtube Video](https://youtu.be/pJyKM-7IgAU?t=85) and this [Wikipedia Article](https://en.wikipedia.org/wiki/Probability_interpretations)
 
-#### 
+### Definitions
 
 1. **Sample Space** - A sample space $\Omega$ associated with a random experiment is the set of all possible outcomes of the experiment
 
@@ -35,6 +35,8 @@ both the sample space $\Omega$ and the event $E$ are uncountably infinite
 $$ P(\bigcup_{i} A_i) \leq \sum_i P(A_i)$$
 
 This is derived from the equation $P(A \cup B) = P(A) + P(B) - \boxed{P(A \cap B)}$
+
+<hr>
 
 ## Conditional Probability
 
@@ -66,7 +68,9 @@ $$ P (A_1 \cap A_2 \cap ... A_n) = P(A_1).P(A_2|A_1).P(A_3|A_1 \cap A_2)...P(A_n
 > * If $A$ and $B$ are disjoint, $P(A|B) = 0$, meaning they are not independent
 > * If $A$ and $B$ are independent, $A^c$ and $B$ are also independent
 
-## Bayes Theorem
+<hr>
+
+## Baye's Theorem
 If A & B are two events and $P(A) \neq 0$, $P(B) \neq 0$,
 $$P(A|B) = \frac{P(B|A).P(A)}{P(B)}$$
 
@@ -74,8 +78,7 @@ $$P(A|B) = \frac{P(B|A).P(A)}{P(B)}$$
 For an exhaustive set of events $A_1, A_2, ... , A_n$
 $$P(B) = \sum_{i} P(B|A_i)(A_i)$$
 
-## Binomial Theorem
-$$ (x+y)^n = \sum_{i=0}^{n} {n \choose i} x^i y^{n-i} $$
+<hr>
 
 ## Random Variables
 
@@ -148,7 +151,11 @@ For the PDF
 * $f_X$ is a non-negative function
 * $\int_{\mathbb{R}} f_X(x)dx=1$
 
-## Expectation
+<hr>
+
+## Basic Statistical Quantities
+
+### Expectation
 If $X$ is a discrete RV
 
 $$ E(X) = \sum_{x} x, p_X(x)$$
@@ -157,28 +164,25 @@ If $X$ is a continuous RV
 
 $$ E(X) = \int_{-\infty}^{\infty} x \, f_X(x)$$
 
-### Expectations for functions of random variables
+#### Expectations for functions of random variables
 
 If $X$ is a discrete RV
 
-$$ E(g(X)) = \sum_y y p_{g(X)}(y) $$
-
-which can be simplified to
-
-$$ E(g(X)) = \sum_{x} g(x) p_X(x) $$
+$$ E(g(X)) = \sum_y y p_{g(X)}(y) = \sum_{x} g(x) p_X(x) $$
 
 
 If $X$ is a continuous RV
 
-$$ E(g(X)) = \int y f_{g(X)}(y)dy $$
-
-which can be simplified to
-
-$$ E(g(X)) = \int_{-\infty}^{\infty} g(x) f_X(x)dx $$
+$$ E(g(X)) = \int y f_{g(X)}(y)dy = \int_{-\infty}^{\infty} g(x) f_X(x)dx $$
 
 A major property of expectations is $E(aX+b)=a E(X) + b$
 
-## Variance
+> **Illustration:**
+> *Consider a set of letters addressed to each person in the world (with a population of ~7B), if you were to randomly deliver the letter to each person, what is expectation of the number of letters that were delivered to the right addressee?*
+> 
+> Consider the expectation of getting a single addressee right. Let's call this person $A_1$. The expectation of delivering the right letter to this person is $E(A_1) = \frac{1}{7B}$. Now, since the total expectation is just the sum of all individual expectations, we have $E(Total) = E(A_1) + E(A_2) + ... + E(A_{7B}) = 1$. Therefore, on average, we can expect to deliver 1 letter to the right person.
+
+### Variance and Standard Deviation
 The variance of an RV $X$ is the expectation of the RV $Y=(X−E(X))^2$
 
 $$ \begin{align*}
@@ -188,6 +192,54 @@ Var(X)  &= E\left((X-E(X))^2\right) \\
 
 A major property of expectations is - $Var(aX+b)=a^2Var(X)$
 
+Standard deviation is the square-root of variance
+
+$$ \sigma_x = \sqrt{Var(x)} = \sqrt{E(X^2)-(E(X))^2}$$
+
+### Covariance and Correlation
+The covariance of RVs $X$ and $Y$ is the measure of linear relationship between the two variables.
+
+$$ \begin{align*}
+Cov(X, Y)  &= E\left[(X-E(X))(Y-E(Y))\right] \\
+        &=E(XY)-E(X)E(Y)
+\end{align*} $$
+
+From the definition of covariance as the expectation of $(X-E(X))(Y-E(Y))$, we can define the covariance using joint probability distributions as -
+
+$$Cov(X,Y)=\mathop{\sum\sum}\limits_{(x,y)\in S} (x-\mu_X)(y-\mu_Y) p_{XY}(x,y)$$
+
+$$Cov(X,Y)=\int_{S_2} \int_{S_1} (x-\mu_X)(y-\mu_Y) f_{XY}(x,y) dx dy$$
+
+<br>
+
+The normalized form of covariance is a quantity varying between $-1$ and $1$ called **correlation**.
+
+$$ \rho_{xy} = \frac{Cov(X, Y)}{\sigma_x \sigma_y} $$
+
+### Skewness and Kurtosis
+**Skewness** is a measure of the asymmetry of the probability distribution of a real-valued random variable about its mean.
+
+![Skewness](./assets/skewness.png)
+
+Skewness can be calculated for a random variable X as the expectation of the [*third standardized moment*](https://en.wikipedia.org/wiki/Standardized_moment) - 
+
+$$ Skewness = \tilde{\mu}_3 = E \left[ \left( \frac{X-\mu}{\sigma}\right)^3 \right]$$
+
+$Skewness > 0 \to $ Positive skewed distribution is also called *right-skewed*.
+
+$Skewness < 0 \to $ Negative skewed distribution is also called *left-skewed*.
+
+<br>
+
+**Kurtosis** is a measure of the "tailedness" of the probability distribution of a real-valued random variable. Kurtosis can be calculated for a random variable X as the expectation of the [*fourth standardized moment*](https://en.wikipedia.org/wiki/Standardized_moment) - 
+
+$$ Kurtosis = \tilde{\mu}_4 = E \left[ \left( \frac{X-\mu}{\sigma}\right)^4 \right]$$
+
+A *Small Kurtosis* implies skinnier tails of the distribution, whereas, a *Large Kurtosis* implies a thicker tails of the distribution.
+
+![Kurtosis](./assets/Kurtosis.png)
+
+<hr>
 
 ## Discrete RV Distributions
 
@@ -205,10 +257,14 @@ $$ E(X) = \theta \qquad Var(X) = \theta(1-\theta) $$
 ![Bernoulli](./assets/bern_dist.png)
 
 ### Binomial Distribution
+
+> **Binomial Theorem**
+> $$ (a+b)^n = \sum_{x=0}^{n} {n \choose x} a^x b^{n-x} $$
+
 The Binomial RV counts the number of successes in $n$ independent Bernoulli experiments with parameter $\theta$, regardless of the ordering of the results of the experiments. The Binomial RV, $X\sim\text{Bin}(n,\theta)$ where $\theta\in[0,1], n\in\mathbb{N}^0$ has the PMF given by -
 
 $$p_X(x)=\begin{cases}
-nC_x \theta^x (1-\theta)^{n-x} &  x=0,1,\ldots,n\\
+{n \choose x} \theta^x (1-\theta)^{n-x} &  x=0,1,\ldots,n\\
 0 & \text{otherwise}
 \end{cases}$$
 
@@ -249,6 +305,7 @@ $$ E(X) = \lambda \qquad Var(X) = \lambda $$
 
 ![Poisson](./assets/poisson_dist.png)
 
+<hr>
 
 ## Continuous RV Distributions
 
@@ -286,3 +343,22 @@ $$f_X(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\rig
 $$ E(X) = \mu \qquad Var(X) = \sigma^2 $$
 
 ![Gaussian](./assets/gaussian_dist.png)
+
+<hr>
+
+## Sampling from any distribution
+
+To sample data from any distribution, we need to first sample from a uniform distribution. We can generate one set of uniformly sampled points in the interval $[0,1]$, and find the inverse of these values from the CDF of the distribution we need a sample from.
+
+> **Example:**
+> 
+> Consider the following CDF for a Gaussian distribution, a uniform sample on the y-axis results in a normally distributed sample in the x-axis
+> 
+> ![Sampling](./assets/sampling_example.png)
+
+<hr>
+
+## Law of large Numbers
+The law of large numbers states that if a random variable is independently sampled a large number of times, the measured sample average converges to the random variable's true expectation.
+
+$$ \bar{X}_n = \frac{X_1 + X_2 + X_3 + ... + X_n}{n} \to E(X) \text{, as } n \to \infty $$
