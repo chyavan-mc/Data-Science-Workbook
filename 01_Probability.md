@@ -359,6 +359,13 @@ To sample data from any distribution, we need to first sample from a uniform dis
 <hr>
 
 ## Law of large Numbers
+
 The law of large numbers states that if a random variable is independently sampled a large number of times, the measured sample average converges to the random variable's true expectation.
 
 $$ \bar{X}_n = \frac{X_1 + X_2 + X_3 + ... + X_n}{n} \to E(X) \text{, as } n \to \infty $$
+
+<hr>
+
+## Central Limit Theorem
+
+The central limit theorem (CLT) states that if a random variable is sampled repeatedly a large number of times, the distribution of the sample mean approaches a normal distribution with $\mu = E(X)$ and $\sigma^2 = \sigma^2_{sample}/n$ regardless of the initial distribution of the random variable
