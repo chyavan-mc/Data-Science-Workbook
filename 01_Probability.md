@@ -219,7 +219,7 @@ $$ \rho_{xy} = \frac{Cov(X, Y)}{\sigma_x \sigma_y} $$
 ### Skewness and Kurtosis
 **Skewness** is a measure of the asymmetry of the probability distribution of a real-valued random variable about its mean.
 
-![Skewness](./assets/skewness.png)
+![Skewness](./assets/01_Probability/skewness.png)
 
 Skewness can be calculated for a random variable X as the expectation of the [*third standardized moment*](https://en.wikipedia.org/wiki/Standardized_moment) - 
 
@@ -237,7 +237,7 @@ $$ Kurtosis = \tilde{\mu}_4 = E \left[ \left( \frac{X-\mu}{\sigma}\right)^4 \rig
 
 A *Small Kurtosis* implies skinnier tails of the distribution, whereas, a *Large Kurtosis* implies a thicker tails of the distribution.
 
-![Kurtosis](./assets/Kurtosis.png)
+![Kurtosis](./assets/01_Probability/Kurtosis.png)
 
 <hr>
 
@@ -254,7 +254,7 @@ $$p_X(x)=\begin{cases} \theta & x=1\\
 
 $$ E(X) = \theta \qquad Var(X) = \theta(1-\theta) $$
 
-![Bernoulli](./assets/bern_dist.png)
+![Bernoulli](./assets/01_Probability/bern_dist.png)
 
 ### Binomial Distribution
 
@@ -272,7 +272,7 @@ $$p_X(x)=\begin{cases}
 
 $$ E(X) = n\theta \qquad Var(X) = n\theta(1-\theta) $$
 
-![Binomial](./assets/binom_dist.png)
+![Binomial](./assets/01_Probability/binom_dist.png)
 
 When the parameter $n$ in the binomial distribution is set to 1, the binomial distribution simplifies to a bernoulli trial.
 
@@ -286,7 +286,7 @@ $$p_X(x)=\begin{cases}\theta(1-\theta)^x & x\in\mathbb{N}\cup\{0\}\\
 
 $$ E(X) = \frac{1 - \theta}{\theta} \qquad Var(X) = \frac{1-\theta}{\theta^2} $$
 
-![Geometric](./assets/geom_dist.png)
+![Geometric](./assets/01_Probability/geom_dist.png)
 
 ### Poisson Distribution
 The Poisson RV, $X\sim \text{Pois}(\lambda)$ where $\lambda>0$ has the PMF given by -
@@ -303,7 +303,7 @@ We observe that the PMF of Poisson approximates the PMF of binomial distribution
 
 $$ E(X) = \lambda \qquad Var(X) = \lambda $$
 
-![Poisson](./assets/poisson_dist.png)
+![Poisson](./assets/01_Probability/poisson_dist.png)
 
 <hr>
 
@@ -319,7 +319,7 @@ $$ f_X(x)=\begin{cases}1/(b-a) & x\in[a,b]\\
 
 $$ E(X) = \frac{a+b}{2} \qquad Var(X) = \frac{(b-a)^2}{12} $$
 
-![Uniform](./assets/uniform_dist.png)
+![Uniform](./assets/01_Probability/uniform_dist.png)
 
 ### Exponential Distribution
 The Exponential RV, $X\sim \text{Exp}(\lambda)$ where $\lambda > 0$ has the PMF given by -
@@ -331,7 +331,7 @@ $$f_X(x)=\begin{cases}\lambda e^{-\lambda x} & x > 0\\
 
 $$ E(X) = \frac{1}{\lambda} \qquad Var(X) = \frac{1}{\lambda^2} $$
 
-![Exponential](./assets/exponential_dist.png)
+![Exponential](./assets/01_Probability/exponential_dist.png)
 
 ### Gaussian Distribution
 The Gaussian RV, $X\sim N(\mu,\sigma^2)$ where $\mu\in\mathbb{R}, \sigma^2 > 0$ has the PMF given by -
@@ -342,7 +342,7 @@ $$f_X(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\rig
 
 $$ E(X) = \mu \qquad Var(X) = \sigma^2 $$
 
-![Gaussian](./assets/gaussian_dist.png)
+![Gaussian](./assets/01_Probability/gaussian_dist.png)
 
 <hr>
 
@@ -354,7 +354,7 @@ To sample data from any distribution, we need to first sample from a uniform dis
 > 
 > Consider the following CDF for a Gaussian distribution, a uniform sample on the y-axis results in a normally distributed sample in the x-axis
 > 
-> ![Sampling](./assets/sampling_example.png)
+> ![Sampling](./assets/01_Probability/sampling_example.png)
 
 <hr>
 
