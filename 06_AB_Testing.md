@@ -82,26 +82,26 @@ Controlled experiments are -
 
 Internal validity refers to the correctness of the experimental results without attempting to generalize to other populations or time periods.
 
-1. Violations of SUTVA
+1. Violations of SUTVA <br>
 Stable Unit Treatment Value Assumption (SUTVA) states that experiment units (e.g., users) do not interfere with one another. The assumption could easily be violated in many cases
 
-2. Survivorship Bias
+2. Survivorship Bias <br>
 Analyzing users who have been active for some time (e.g., two months) introduces survivorship bias.
 
-3. Intention-to-Treat
+3. Intention-to-Treat <br>
 The Treatment effect we measure should be based on the offer, or intention to treat, not whether it was actually applied.
 
-4. Sample Ratio Mismatch (SRM)
+4. Sample Ratio Mismatch (SRM) <br>
 SRM refers to a situation where the distribution of users between the control group (A) and the experimental group (B) is not as originally intended or specified.
 
 
 ### Threats to External Validity
 External validity refers to the extent to which the results of a controlled experiment can be generalized along axes
 
-1. Primacy Effects
+1. Primacy Effects <br>
 Complete redesigns that adversely affect users primed to the old design. This is a major reason for continuous redesign being superior to One-shot complete redesign. However small the change, any change may result in primacy effects in the treatment group that may overstate or understate the actual effect in a short term. *Negatively affects the changes as users take time to adopt the new feature*.
 
-2. Novelty Effects
+2. Novelty Effects <br>
 The term is usually used to describe a positive effect that is entirely due to fact that there is a change, a new design feature, module, or process being introduced, regardless of what the change is. *Positively affects the changes as users as users curiously try the new feature*
 
 ### Simpson’s Paradox
