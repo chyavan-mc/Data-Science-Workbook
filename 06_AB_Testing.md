@@ -1,10 +1,6 @@
-# Probability and Statistics
+# A/B Testing
 
-
-## A/B Testing
-
-
-### Basics
+## Basics
 An A/B test, also known as a split test, is a controlled experiment in which two or more variants are compared to determine which one performs better.
 
 Example environments where A/B Testing is employed - 
@@ -24,23 +20,23 @@ Experiments can be run on multiple channels -
 * Customer Relationship Management (CRM) Systems
 
 
-#### Overall Evaluation Criteria (OEC)
+### Overall Evaluation Criteria (OEC)
 OEC is a quantitative measure of the experiment‘s objective. The OEC must be measurable in the short term (the duration of an experiment) yet believed to causally drive long-term strategic objectives. An OEC can be a combination of metrics of usage, relevance, ad revenue, etc. OECs are also called *Response variable*, *Dependent variable*, *Outcome*, *Evaluation* and *Fitness Function*. And example of an OEC is *Active days per user*, where the outcome is the users' frequency measure.
 
 An experiment may have multiple objectives and maintain a balanced scorecard for the metrics, but it is often desired to select a single metric as a weighted combination of such objectives.
 
 
-#### Parameter
+### Parameter
 A controllable experimental variable that is thought to influence the OEC or other metrics of interest. In simple A/B tests, there is commonly a single parameter with two values. It is common to use univariable designs with multiple values (such as, A/B/C/D). 
 
 Multivariable tests, also called *Multivariate Tests* (MVTs), evaluate multiple parameters (variables) together, such as font color and font size, allowing experimenters to discover a global optimum when parameters **interact**
 
 
-#### Variant
+### Variant
 Variant is a user experience being tested, typically by assigning values to parameters. In a simple A/B test, A and B are the two variants, usually called *Control* and *Treatment*.
 
 
-#### Randomization Unit
+### Randomization Unit
 Randomization unit is a pseudo-randomization (e.g., hashing) process is applied to units (e.g., users or pages) to map them to variants. Randomization units must be *persistant* and *independent*
 
 * Persistent - A user should consistently see the same experience. Some experimental designs choose to randomize by pages, sessions, or user-day (a 24-hour window where the experience is consistent)
@@ -54,7 +50,7 @@ Controlled experiments are -
 
 
 
-### Necessary conditions for a successful A/B Test
+## Necessary conditions for a successful A/B Test
 * There are experimental units (e.g., users) that can be assigned to different variants with no interference
 * There are enough experimental units (e.g., users)
 * Key metrics, ideally an OEC, are agreed upon and can be practically evaluated
@@ -62,7 +58,7 @@ Controlled experiments are -
 
 
 
-### Considerations for an A/B Test
+## Considerations for an A/B Test
 1. **OEC** - Points to remember w.r.t to the OEC are
     * Metrics should not be game-able
     * **Guardrail metric** -  These are business-critical metrics to be monitored for negative change while conducting A/B tests.
@@ -82,7 +78,7 @@ Controlled experiments are -
     * Seasonality - This addresses long term seasonality and effects of exceptional seasonal effects (Christmas, Thanksgiving, geography specific holidays, etc.)
     * *Primacy* and *Novelty* effects - There are experiments that tend to have a larger or smaller initial effect that takes time to stabilize.
 
-#### Threats to Internal Validity
+### Threats to Internal Validity
 
 Internal validity refers to the correctness of the experimental results without attempting to generalize to other populations or time periods.
 
@@ -99,7 +95,7 @@ The Treatment effect we measure should be based on the offer, or intention to tr
 SRM refers to a situation where the distribution of users between the control group (A) and the experimental group (B) is not as originally intended or specified.
 
 
-#### Threats to External Validity
+### Threats to External Validity
 External validity refers to the extent to which the results of a controlled experiment can be generalized along axes
 
 1. Primacy Effects
@@ -108,7 +104,7 @@ Complete redesigns that adversely affect users primed to the old design. This is
 2. Novelty Effects
 The term is usually used to describe a positive effect that is entirely due to fact that there is a change, a new design feature, module, or process being introduced, regardless of what the change is. *Positively affects the changes as users as users curiously try the new feature*
 
-#### Simpson’s Paradox
+### Simpson’s Paradox
 If an experiment goes through ramp-up that is, two or more periods with different percentages assigned to the variants, combining the results can result in directionally incorrect estimates of the Treatment effects. That is, Treatment may be better than Control in the first phase and in the second phase, but worse overall when the two periods are combined. Examples from controlled experiments where Simpson’s paradox may arise
 
 1. Users are sampled
@@ -116,10 +112,10 @@ If an experiment goes through ramp-up that is, two or more periods with differen
 3. Sequential Tests with different populations
 
 
-### Decision Making
+## Decision Making
 A/B Testing falls under the larger umbrella of executing successful strategies. This includes the data-driven understanding of the changes being done to implement the strategy, and making decisions that optimally influence the business value.
 
-#### Statistically significance vs Practically significance
+### Statistically significance vs Practically significance
 
 **Statistical Significance** - Statistical hypothesis testing is used to determine whether the result of a data set is statistically significant. This is to identify if the changes being made objectively have an effect.
 
@@ -127,7 +123,7 @@ A/B Testing falls under the larger umbrella of executing successful strategies. 
     Example - A feature that provides a 1% improvement in an established process of a large-scale company like Google may result in Hundreds/Millions of Dollars of revenue increase. For a start-up they may have a practical significance only if the features they are providing show at least a 10% improvement.
 
 
-#### From Results to Decisions
+### From Results to Decisions
 A decision needs to take into consideration both the conclusion from the measurement and the broader context, such as
 * Are there any tradeoffs between different metrics?
 * What is the cost (launching and maintaining) of launching this change?
