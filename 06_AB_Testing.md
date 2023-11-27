@@ -187,7 +187,9 @@ $\Delta$ = $\bar{X}_t - \bar{X}_c$ <br>
 $SE_c^2$ = $\frac{\sigma_c^2}{N_c}$ <br>
 $SE_t^2$ = $\frac{\sigma_t^2}{N_t}$ <br>
 
-$t$ = $\frac{\Delta}{\left[ SE_t^2 + SE_c^2 \right]^{1/2}}$
+$t$ = $\frac{\Delta}{\left[ SE_t^2 + SE_c^2 \right]^{1/2}}$ <br>
+DF = $(N_c - 1)$ + $(N_t - 1)$
+
 
 [Online t-value to P-value Calculator](https://www.socscistatistics.com/pvalues/tdistribution.aspx)
 
